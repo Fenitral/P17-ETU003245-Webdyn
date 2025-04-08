@@ -1,0 +1,7 @@
+le projet consiste a un prevision de depense en utilisant java servlet avec mysql,DAO,html,jsp
+1-Creer moi une page pour pouvoir ajouter une prevision=>nom du libelle et montant puis valider
+2- ca amene dans une page pour ajouter une depense => nom du depense(liste deroulante des nom du libelle) et montant
+    -si montant de cette libelle dans depense est superieure au montant dans la prevision=>une erreur apparait
+    -un lien voir toutes les depense
+3-Le lien mene a cette page de dashbord qui affiche un tableau de toutes les depense 
+    -Le tableau contient comme colonne:Nom du libelle , Montant(somme de depense pour chaque nom de pervision:exemple somme de tous les depenses de frais effectue), Reste (Montant prevision - somme Montant de depense a cote)
