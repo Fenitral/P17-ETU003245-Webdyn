@@ -1,0 +1,229 @@
+/* style.css */
+
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style de base pour le corps */
+body {
+    background: linear-gradient(135deg, #1e272e 0%, #2d3436 100%);
+    color: #ecf0f1;
+    min-height: 100vh;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+/* Conteneur principal pour centrer le contenu */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Style pour les titres */
+h3 {
+    font-size: 1.8rem;
+    color: #00b894;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Style pour les formulaires */
+form {
+    background: #2d3436;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #dfe6e9;
+    display: block;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #636e72;
+    border-radius: 6px;
+    background: #353b48;
+    color: #ecf0f1;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #00b894;
+    background: #404752;
+    box-shadow: 0 0 5px rgba(0, 184, 148, 0.5);
+    outline: none;
+}
+
+/* Bouton de soumission */
+button[type="submit"] {
+    background: #00b894;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin: 20px auto 0;
+}
+
+button[type="submit"]:hover {
+    background: #009875;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+a {
+    display: block;
+    font-size: 0.875rem; /* Petite taille */
+    color: #e17055;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    margin: 15px auto 0; /* Positionné sous le formulaire */
+    text-align: center;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    background: #d35400;
+    border-radius: 6px;
+}
+/* Style pour le tableau (dashboard.jsp) */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #2d3436;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-collapse: collapse;
+}
+
+th {
+    background: #0984e3;
+    color: #dfe6e9;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #636e72;
+    font-size: 1rem;
+}
+
+tr:nth-child(even) {
+    background: #353b48;
+}
+
+tr:hover {
+    background: #404752;
+    transition: background 0.2s ease;
+}
+
+th, td {
+    border: 1px solid #636e72;
+}
+
+/* Style pour les messages d'erreur */
+p[style*="color: red"] {
+    color: #e17055;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 8px;
+    background: rgba(225, 112, 85, 0.1);
+    border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"],
+    a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+/* Accessibilité */
+:focus {
+    outline: 2px solid #00b894;
+    outline-offset: 2px;
+}
+
+/* Placeholder stylisé */
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+select:invalid {
+    color: #b2bec3;
+    opacity: 0.7;
+    font-style: italic;
+}
